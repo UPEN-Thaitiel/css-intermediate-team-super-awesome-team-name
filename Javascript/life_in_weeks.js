@@ -25,16 +25,18 @@ Example Output
 
 
 function lifeInWeeks(age) {
+    /************Don't change the code above************/    
     
-/************Don't change the code above************/    
+    const maxAge = 90;
+    const yearsLeft = maxAge - age;
     
-    //Write your code here.
+    const daysLeft = yearsLeft * 365;
+    const weeksLeft = yearsLeft * 52;
+    const monthsLeft = yearsLeft * 12;
     
+    console.log(`You have ${daysLeft} days, ${weeksLeft} weeks, and ${monthsLeft} months left.`);
     
-    
-    
-    
-/*************Don't change the code below**********/
+    /*************Don't change the code below**********/
 }
 
-lifeInWeeks(56)
+lifeInWeeks(56);

@@ -40,3 +40,4 @@ function test() {
     console.log("b is " + b);
 }
 
+test();
