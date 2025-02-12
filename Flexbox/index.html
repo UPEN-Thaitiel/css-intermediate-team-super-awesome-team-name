@@ -11,10 +11,81 @@
     <style>
       body {
         font-family: "Sono", sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f9f9f9;
       }
 
-      /* Hint: What can you do with a media query and flexbox? */
-      @media (max-width: 1250px) {
+      .pricing-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* espacio entre los elementos */
+        padding: 20px; 
+      }
+
+      .pricing-plan {
+        background-color: #ffffff;
+        width: 300px; 
+        text-align: center; 
+        line-height: 1.8;  
+        font-size: 18px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+      }
+
+      .plan-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        background-color: #ececec;
+        padding: 15px;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .plan-price {
+        font-weight: bold;
+        font-size: 2rem; 
+        color: #ff5722; /* color naranja  precio*/
+        margin: 15px 0;
+      }
+
+      .plan-features {
+        font-size: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0 20px 20px;
+      }
+
+      .plan-features li {
+        margin: 10px 0; /* margen entre listas*/
+      }
+
+      .plan-button {
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      /* Media Query for Responsive Design */
+      @media (min-width: 768px) {
+        .pricing-container {
+          flex-direction: row;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .pricing-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .pricing-plan {
+          width: 90%;
+        }
       }
     </style>
   </head>
@@ -31,6 +102,7 @@
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
+
       <div class="pricing-plan">
         <div class="plan-title">Standard</div>
         <div class="plan-price">$19.99/month</div>
@@ -41,6 +113,7 @@
         </ul>
         <button class="plan-button">Sign Up</button>
       </div>
+
       <div class="pricing-plan">
         <div class="plan-title">Premium</div>
         <div class="plan-price">$49.99/month</div>
